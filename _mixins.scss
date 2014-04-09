@@ -1,3 +1,15 @@
+//
+// @file _mixins.scss
+// @author Heath Beckett <@healthcliff>
+// @author Will Steinmetz <@willatasheavenue>
+//
+// Helper SASS mixins and functions
+//
+
+//
+// Create a sprite with the given name
+// @param string $name
+//
 @mixin sprite-background($name) {
     background-image: sprite-url($sprites);
     background-position: sprite-position($sprites, $name);
@@ -8,6 +20,10 @@
     width: image-width(sprite-file($sprites, $name));
 }
 
+//
+// Create a retina sprite with the given name
+// @param string $name
+//
 @mixin retina-sprite-background($name) {
     background-image: sprite-url($retina_sprites);
     background-position: nth(sprite-position($retina_sprites, $name), 1) / 2 nth(sprite-position($retina_sprites, $name), 2) / 2;
@@ -19,6 +35,13 @@
     width: image-width(sprite-file($retina_sprites, $name)) / 2;
 }
 
+//
+// Define a new font
+// @param string $family
+// @param string $style
+// @param string $weight
+// @param string $filename
+//
 @mixin font-face($family, $style, $weight, $filename) {
     @font-face {
         font-family: $family;
@@ -32,10 +55,19 @@
     }
 }
 
+//
+// Convert a pixel value to ems
+// @param int/string $px
+// @param int/string $base
+// @note $base-font-size should be defined in the projects (usually 16px)
+//
 @function em($px, $base: $base-font-size) {
     @return ($px / $base) * 1em;
 }
 
+//
+// Add the simple clearfix to the selector
+//
 @mixin clearfix() {
     &:after, &:before {
         content: " ";
