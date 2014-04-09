@@ -9,6 +9,7 @@
 //
 // Create a sprite with the given name
 // @param string $name
+// @note a sprite sheet must be created witht he variable named $sprites
 //
 @mixin sprite-background($name) {
     background-image: sprite-url($sprites);
@@ -23,6 +24,7 @@
 //
 // Create a retina sprite with the given name
 // @param string $name
+// @note a sprite sheet must be created witht he variable named $retina_sprites
 //
 @mixin retina-sprite-background($name) {
     background-image: sprite-url($retina_sprites);
