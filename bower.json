@@ -1,0 +1,24 @@
+{
+  "name": "asheavenue-mixins",
+  "version": "0.1.0",
+  "homepage": "https://github.com/AsheAvenue/Mixins",
+  "authors": [
+    "Heath Beckett <heath@asheavenue.com>",
+    "Will Steinmetz <wsteinmetz@asheavenue.com>"
+  ],
+  "description": "Sass mixins created and used by Ashe Avenue",
+  "main": "_mixins.scss",
+  "keywords": [
+    "sass",
+    "css",
+    "mixins"
+  ],
+  "license": "n/a",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
